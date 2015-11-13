@@ -1,0 +1,8 @@
+github "Alamofire/Alamofire" "2.0.2"
+github "ikesyo/Himotoki" "1.1.2"
+github "Quick/Nimble" "v2.0.0-rc.3"
+github "Quick/Quick" "v0.6.0"
+github "antitypical/Result" "0.6.0-beta.5"
+github "SwiftyJSON/SwiftyJSON" "2.3.1"
+github "Swinject/Swinject" "0.2.3"
+github "ReactiveCocoa/ReactiveCocoa" "6e202fb9dc03030a0c308f6e68d73c56bc288802"

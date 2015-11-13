@@ -11,21 +11,21 @@ import GoELinkModel
 
 // Inherits NSObject to use rac_willDeallocSignal.
 public final class ContactListTableViewCellModel: NSObject, ContactListTableViewCellModeling {
-    public let objectId: AnyProperty<String>
-    public let first_name: AnyProperty<String>
-    public let last_name: AnyProperty<String>
+    public let objectId: String
+    public let first_name: String
+    public let last_name: String
     
     private let network: Networking
-    private let profileURL: AnyProperty<String>
+    private let profileURL: String
     private var profileImage: UIImage?
     
     var newContactEntity: ContactEntity = ContactEntity()
     
     internal init(contact: ContactEntity, network: Networking) {
-        objectId = newContactEntity.objectId
-        first_name = newContactEntity.first_name
-        last_name = newContactEntity.last_name
-        profileURL = newContactEntity.profileURL
+        objectId = newContactEntity.objectId.value
+        first_name = newContactEntity.first_name.value
+        last_name = newContactEntity.last_name.value
+        profileURL = newContactEntity.profileURL.value
         
         self.network = network
 

@@ -12,9 +12,9 @@ import Result
 import SwiftyJSON
 
 
-final public class ResponseEntity: JSONDecodable  {
+public final class ResponseEntity: JSONDecodable  {
     
-    let results: [ContactEntity]
+    public let results: [ContactEntity]
     
     
     init(results:[ContactEntity]) {

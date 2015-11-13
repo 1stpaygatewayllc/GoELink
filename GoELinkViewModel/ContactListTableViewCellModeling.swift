@@ -9,9 +9,9 @@
 import ReactiveCocoa
 
 public protocol ContactListTableViewCellModeling {
-    var objectId: AnyProperty<String> { get }
-    var first_name: AnyProperty<String> { get }
-    var last_name: AnyProperty<String> { get }
+    var objectId: String { get }
+    var first_name: String { get }
+    var last_name: String { get }
     
     func getProfileImage() -> SignalProducer<UIImage?, NoError>
 }

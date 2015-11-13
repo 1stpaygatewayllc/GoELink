@@ -38,7 +38,7 @@ public final class ContactListTableViewModel: ContactListTableViewModeling {
 //                !searching && trigger != nil
 //            })
 //    }
-    private let nextPageTrigger = MutableProperty<(SignalProducer<(), NoError>, Event<(), NoError> -> ())?>(nil) // SignalProducer buffer
+    private let nextPageTrigger = MutableProperty<(SignalProducer<(), NoError>, Observer<(), NoError>)?>(nil) // SignalProducer buffer
     
 //    private let imageSearch: ImageSearching
     private let contactService: ContactServicing
@@ -70,12 +70,12 @@ public final class ContactListTableViewModel: ContactListTableViewModeling {
                 self._cellModels.value += cellModels
                 self._searching.value = false
             })
-            .on(error: { error in
-                self._errorMessage.value = error.description
-            })
+//            .on(error: { error in
+////                self._errorMessage.value = error.description.value
+//            })
             .on(event: { event in
                 switch event {
-                case .Completed, .Error, .Interrupted:
+                case .Completed, .Failed, .Interrupted:
                     self.nextPageTrigger.value = nil
                     self._searching.value = false
                 default:

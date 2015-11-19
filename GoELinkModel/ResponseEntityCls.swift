@@ -6,7 +6,7 @@
 //  Copyright © 2015 Swinject Contributors. All rights reserved.
 //
 
-import Himotoki
+//import Himotoki
 
 //public struct ResponseEntity {
 //    public let results: [ContactEntity]

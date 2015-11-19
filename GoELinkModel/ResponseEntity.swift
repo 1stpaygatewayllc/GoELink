@@ -12,7 +12,7 @@ import Result
 import SwiftyJSON
 
 
-public final class ResponseEntity: JSONDecodable  {
+final public class ResponseEntity: JSONDecodable  {
     
     public let results: [ContactEntity]
     
@@ -23,7 +23,7 @@ public final class ResponseEntity: JSONDecodable  {
     
     // MARK: JSONDecodable
     
-    class func decode(json: JSON) -> Result<ResponseEntity, NSError> {
+    public class func decode(json: JSON) -> Result<ResponseEntity, NSError> {
         
         if let contactsJSON: Array<JSON> = json["results"].arrayValue  {
             let contacts = contactsJSON.map { self.parseContact($0.dictionaryValue) }
@@ -40,7 +40,7 @@ public final class ResponseEntity: JSONDecodable  {
     
     */
     
-    class func parseContact(contactDict: [String: JSON]) -> ContactEntity {
+    public class func parseContact(contactDict: [String: JSON]) -> ContactEntity {
         
         let first_name = contactDict["first_name"]!.string
         let last_name = contactDict["last_name"]!.string

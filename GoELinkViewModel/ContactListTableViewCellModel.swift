@@ -22,6 +22,7 @@ public final class ContactListTableViewCellModel: NSObject, ContactListTableView
     var newContactEntity: ContactEntity = ContactEntity()
     
     internal init(contact: ContactEntity, network: Networking) {
+        print(contact)
         objectId = newContactEntity.objectId.value
         first_name = newContactEntity.first_name.value
         last_name = newContactEntity.last_name.value

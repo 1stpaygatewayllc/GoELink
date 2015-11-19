@@ -17,12 +17,12 @@ public final class Network: Networking {
     public func requestJSON(url: String, parameters: [String : AnyObject]?) -> SignalProducer<AnyObject, NetworkError> {
         return SignalProducer<AnyObject, NetworkError> { observer, disposable in
             Alamofire.request(.GET, url, parameters: parameters)
-                .response(queue: self.queue, responseSerializer: Alamofire.Request.JSONResponseSerializer()) { _, _, result in
-                    switch result {
+                .response(queue: self.queue, responseSerializer: Alamofire.Request.JSONResponseSerializer(options: .AllowFragments)) {(Response) -> Void in
+                    switch Response.result {
                     case .Success(let value):
                         observer.sendNext(value)
                         observer.sendCompleted()
-                    case .Failure(_, let error):
+                    case .Failure(let error):
                         observer.sendFailed(NetworkError(error: error))
                     }
                 }
@@ -32,13 +32,13 @@ public final class Network: Networking {
     public func requestJSONWithRoute(route: ParseDotComRouter) -> SignalProducer<AnyObject, NetworkError> {
         return SignalProducer<AnyObject, NetworkError>  { observer, disposable in
             Alamofire.request(route)
-                .response(queue: self.queue, responseSerializer: Alamofire.Request.JSONResponseSerializer()) { _, _, result in
-                    switch result {
+                .response(queue: self.queue, responseSerializer: Alamofire.Request.JSONResponseSerializer()) {(Response) -> Void in
+                    switch Response.result {
                     case .Success(let value):
-//                        print(value)
+                        print(value)
                         observer.sendNext(value)
                         observer.sendCompleted()
-                    case .Failure(_, let error):
+                    case .Failure(let error):
                         observer.sendFailed(NetworkError(error: error))
                     }
             }
@@ -48,8 +48,8 @@ public final class Network: Networking {
     public func requestImage(url: String) -> SignalProducer<UIImage, NetworkError> {
         return SignalProducer { observer, disposable in
             Alamofire.request(.GET, url)
-                .response(queue: self.queue, responseSerializer: Alamofire.Request.dataResponseSerializer()) { _, _, result in
-                    switch result {
+                .response(queue: self.queue, responseSerializer: Alamofire.Request.dataResponseSerializer()) { (Response) -> Void in
+                    switch Response.result {
                     case .Success(let data):
                         guard let image = UIImage(data: data) else {
                             observer.sendFailed(NetworkError.IncorrectDataReturned)
@@ -57,7 +57,7 @@ public final class Network: Networking {
                         }
                         observer.sendNext(image)
                         observer.sendCompleted()
-                    case .Failure(_, let error):
+                    case .Failure(let error):
                         observer.sendFailed(NetworkError(error: error))
                     }
             }

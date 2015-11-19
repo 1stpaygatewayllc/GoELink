@@ -64,7 +64,7 @@ final public class ContactEntity: Equatable, JSONDecodable, JSONEncodable  {
 
     // MARK: JSONDecodable
     
-    class func decode(json: JSON) -> Result<ContactEntity, NSError> {
+    public class func decode(json: JSON) -> Result<ContactEntity, NSError> {
         return Result(ContactEntity(
             first_name: json["first_name"].stringValue,
             last_name: json["last_name"].stringValue,
@@ -76,7 +76,7 @@ final public class ContactEntity: Equatable, JSONDecodable, JSONEncodable  {
     
     // MARK: JSONEncodable
     
-    class func encode(object: ContactEntity) -> Result<AnyObject, NSError> {
+    public class func encode(object: ContactEntity) -> Result<AnyObject, NSError> {
         var contact = [String: AnyObject]()
         
         contact["first_name"] = object.first_name.value

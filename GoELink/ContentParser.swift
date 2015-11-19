@@ -9,6 +9,7 @@
 import Foundation
 import SwiftyJSON
 import Result
+import GoELinkModel
 
 // MARK: JSONDecodable
 

@@ -53,6 +53,8 @@
 		5A3881851B964341005FC078 /* GoELinkViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3881471B964113005FC078 /* GoELinkViewModel.framework */; };
 		5A3881861B9643B7005FC078 /* GoELinkView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A3881271B964106005FC078 /* GoELinkView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A3881871B9643D0005FC078 /* GoELinkViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A3881491B964113005FC078 /* GoELinkViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A56812A1BFE0BF600813191 /* ResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97FE531BB48DCC005EE7F8 /* ResponseEntity.swift */; };
+		5A56812B1BFE0BFF00813191 /* ContactEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11294B1BB47F6D002939C5 /* ContactEntity.swift */; };
 		5A8D7F011BA0CD9D006E4A53 /* ContactDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D7EFF1BA0CD9D006E4A53 /* ContactDetailViewModel.swift */; };
 		5A8D7F021BA0CD9D006E4A53 /* ContactDetailViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D7F001BA0CD9D006E4A53 /* ContactDetailViewModeling.swift */; };
 		5A8D7F041BA0D769006E4A53 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D7F031BA0D769006E4A53 /* ContactDetailViewController.swift */; };
@@ -204,6 +206,7 @@
 		289E2B0A1B9FC73800A47FEE /* dSYMs */ = {
 			isa = PBXGroup;
 			children = (
+				28BB79581BFD749200BD120D /* SwiftyJSON.framework.dSYM */,
 				289E2AEF1B9FC41500A47FEE /* Alamofire.framework.dSYM */,
 				289E2AF11B9FC41500A47FEE /* ReactiveCocoa.framework.dSYM */,
 				289E2AF21B9FC41500A47FEE /* Result.framework.dSYM */,
@@ -227,7 +230,6 @@
 		28BDEF761B6A86F100300553 = {
 			isa = PBXGroup;
 			children = (
-				28BB79581BFD749200BD120D /* SwiftyJSON.framework.dSYM */,
 				289E2B0A1B9FC73800A47FEE /* dSYMs */,
 				289E2B0B1B9FC74100A47FEE /* Frameworks */,
 				28BDEF811B6A86F100300553 /* GoELink */,
@@ -599,6 +601,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A56812B1BFE0BFF00813191 /* ContactEntity.swift in Sources */,
+				5A56812A1BFE0BF600813191 /* ResponseEntity.swift in Sources */,
 				5A97FE511BB48601005EE7F8 /* ContentParser.swift in Sources */,
 				28BDEF851B6A86F100300553 /* AppDelegate.swift in Sources */,
 			);

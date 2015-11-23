@@ -68,11 +68,11 @@ extension ContactDetailViewModel: ContactDetailViewModelModifiable {
         
         self.contactEntities = contactEntities
         currentContactIndex = index
-//        let contactEntity = currentContactEntity
+        let contactEntity = currentContactEntity
         
-//        self._objectId.value = contactEntity?.objectId
-//        self._firstNameText.value = contactEntity?.first_name
-//        self._lastNameText.value = contactEntity?.last_name
+        self._objectId.value = contactEntity?.objectId.value
+        self._firstNameText.value = contactEntity?.first_name.value
+        self._lastNameText.value = contactEntity?.last_name.value
         
 //        self._usernameText.value = contactEntity?.first_name
 //        self._pageImageSizeText.value = imageEntity.map { "\($0.pageImageWidth) x \($0.pageImageHeight)" }

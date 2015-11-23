@@ -21,33 +21,33 @@ public func == (left: ContactEntity, right: ContactEntity) -> Bool {
 
 final public class ContactEntity: Equatable, JSONDecodable, JSONEncodable  {
 
-//    public var objectId: AnyProperty<String> { return AnyProperty(_objectId) }
-//    public var first_name: AnyProperty<String> { return AnyProperty(_first_name) }
-//    public var last_name: AnyProperty<String> { return AnyProperty(_last_name) }
-//    public var profileURL: AnyProperty<String> { return AnyProperty(_profileURL) }
+    public var objectId: AnyProperty<String> { return AnyProperty(_objectId) }
+    public var first_name: AnyProperty<String> { return AnyProperty(_first_name) }
+    public var last_name: AnyProperty<String> { return AnyProperty(_last_name) }
+    public var profileURL: AnyProperty<String> { return AnyProperty(_profileURL) }
     
-    public var objectId: MutableProperty<String>
-    public var first_name: MutableProperty<String>
-    public var last_name: MutableProperty<String>
-    public var profileURL: MutableProperty<String>
+//    public var objectId: MutableProperty<String>
+//    public var first_name: MutableProperty<String>
+//    public var last_name: MutableProperty<String>
+//    public var profileURL: MutableProperty<String>
     
-//    var _objectId: MutableProperty<String>
-//    var _first_name: MutableProperty<String>
-//    var _last_name: MutableProperty<String>
-//    var _profileURL: MutableProperty<String>
+    var _objectId: MutableProperty<String>
+    var _first_name: MutableProperty<String>
+    var _last_name: MutableProperty<String>
+    var _profileURL: MutableProperty<String>
     
     public init() {
-        objectId = MutableProperty("")
-        first_name = MutableProperty("")
-        last_name = MutableProperty("")
-        profileURL = MutableProperty("")
+        _objectId = MutableProperty<String>("")
+        _first_name = MutableProperty<String>("")
+        _last_name = MutableProperty<String>("")
+        _profileURL = MutableProperty<String>("")
     }
     
     init(first_name: String, last_name: String, objectId: String, profileURL: String) {
-        self.objectId = MutableProperty(objectId)
-        self.first_name = MutableProperty(first_name)
-        self.last_name = MutableProperty(last_name)
-        self.profileURL = MutableProperty(profileURL)
+        _objectId = MutableProperty<String>(objectId)
+        _first_name = MutableProperty<String>(first_name)
+        _last_name = MutableProperty<String>(last_name)
+        _profileURL = MutableProperty<String>(profileURL)
 
     }
     
@@ -55,10 +55,10 @@ final public class ContactEntity: Equatable, JSONDecodable, JSONEncodable  {
         last_name: MutableProperty<String>,
         objectId: MutableProperty<String>,
         profileURL: MutableProperty<String>) {
-        self.objectId = objectId
-        self.first_name = first_name
-        self.last_name = last_name
-        self.profileURL = profileURL
+        _objectId = objectId
+        _first_name = first_name
+        _last_name = last_name
+        _profileURL = profileURL
     }
     
 

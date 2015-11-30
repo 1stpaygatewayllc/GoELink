@@ -11,25 +11,25 @@ import XCTest
 
 class PersonTests: XCTestCase {
     
-    var person:Person!
-    let firstName:String = "firstName";
-    let surName:String = "surName";
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        person = Person(firstName:firstName, surName:surName)
-        
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        
-        super.tearDown()
-        person = nil
-        
-    }
+//    var person:Person!
+//    let firstName:String = "firstName";
+//    let surName:String = "surName";
+//    
+//    override func setUp() {
+//        super.setUp()
+//        // Put setup code here. This method is called before the invocation of each test method in the class.
+//        
+//        person = Person(firstName:firstName, surName:surName)
+//        
+//    }
+//    
+//    override func tearDown() {
+//        // Put teardown code here. This method is called after the invocation of each test method in the class.
+//        
+//        super.tearDown()
+//        person = nil
+//        
+//    }
     
     //    func testShowFirstNameFollowedBySurName() {
     //        // This is an example of a functional test case.
@@ -37,11 +37,11 @@ class PersonTests: XCTestCase {
     //        XCTAssertEqual(viewModelPerson.fullNameText, firstName + " " + surName, "Displays first name after last name")
     //    }
     
-    func testShowSurNameFollowedByFirstNameForContactDetail() {
-        // This is an example of a functional test case.
-        let viewModelPerson :ContactDetailViewModel = ContactDetailViewModel(contact: person)
-        XCTAssertEqual(viewModelPerson.fullNameText, surName + ", " + firstName, "Displays surname before first name")
-    }
+//    func testShowSurNameFollowedByFirstNameForContactDetail() {
+//        // This is an example of a functional test case.
+//        let viewModelPerson :ContactDetailViewModel = ContactDetailViewModel(contact: person)
+//        XCTAssertEqual(viewModelPerson.fullNameText, surName + ", " + firstName, "Displays surname before first name")
+//    }
     
     func testExample() {
         // This is an example of a functional test case.

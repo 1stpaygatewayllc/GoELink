@@ -1,5 +1,5 @@
 //
-//  ContactListTableViewControllers.swift
+//  ContactListTableViewController.swift
 //  GoELink
 //
 //  Created by Ger O'Sullivan on 9/4/15.

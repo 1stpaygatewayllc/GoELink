@@ -34,6 +34,15 @@
 		28BDEF911B6A86F100300553 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28BDEF8F1B6A86F100300553 /* LaunchScreen.xib */; };
 		28BE56B91BFD6B6700A08911 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE56B81BFD6B6700A08911 /* Alamofire-SwiftyJSON.swift */; };
 		5A11294C1BB47F6D002939C5 /* ContactEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11294B1BB47F6D002939C5 /* ContactEntity.swift */; };
+		5A263C611C0C9A4A00E34A54 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A263C511C0C98D900E34A54 /* AppDelegateSpec.swift */; };
+		5A263C621C0C9A5E00E34A54 /* GoELinkModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3881021B9640F9005FC078 /* GoELinkModel.framework */; };
+		5A263C631C0C9A5E00E34A54 /* GoELinkView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3881251B964106005FC078 /* GoELinkView.framework */; };
+		5A263C641C0C9A5E00E34A54 /* GoELinkViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3881471B964113005FC078 /* GoELinkViewModel.framework */; };
+		5A263C651C0C9A7800E34A54 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289E2AE71B9FC3B700A47FEE /* Swinject.framework */; };
+		5A263C681C0C9A7900E34A54 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C661C0C9A7900E34A54 /* Nimble.framework */; };
+		5A263C691C0C9A7900E34A54 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C671C0C9A7900E34A54 /* Quick.framework */; };
+		5A263C6B1C0C9A9D00E34A54 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C661C0C9A7900E34A54 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A263C6C1C0C9A9D00E34A54 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C671C0C9A7900E34A54 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A2B638C1B98C50B00D7BBD6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B63881B98C50B00D7BBD6 /* Network.swift */; };
 		5A2B638D1B98C50B00D7BBD6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B63891B98C50B00D7BBD6 /* NetworkError.swift */; };
 		5A2B638E1B98C50B00D7BBD6 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B638A1B98C50B00D7BBD6 /* Networking.swift */; };
@@ -61,9 +70,19 @@
 		5A97FE511BB48601005EE7F8 /* ContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97FE501BB48601005EE7F8 /* ContentParser.swift */; };
 		5A97FE521BB48655005EE7F8 /* ContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97FE501BB48601005EE7F8 /* ContentParser.swift */; };
 		5A97FE541BB48DCC005EE7F8 /* ResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97FE531BB48DCC005EE7F8 /* ResponseEntity.swift */; };
-		5AA3F2081B99D6A600C269F6 /* ContactListTableViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA3F2071B99D6A600C269F6 /* ContactListTableViewControllers.swift */; };
+		5AA3F2081B99D6A600C269F6 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA3F2071B99D6A600C269F6 /* ContactListTableViewController.swift */; };
 		5AA3F20A1B99DA9D00C269F6 /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA3F2091B99DA9D00C269F6 /* ContactListTableViewCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A263C5F1C0C9A2B00E34A54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28BDEF771B6A86F100300553 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28BDEF7E1B6A86F100300553;
+			remoteInfo = GoELink;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		289E2AE91B9FC3BF00A47FEE /* Copy dSYMs */ = {
@@ -89,6 +108,18 @@
 				289E2B091B9FC64F00A47FEE /* GoELinkViewModel.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A263C6A1C0C9A8600E34A54 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5A263C6B1C0C9A9D00E34A54 /* Nimble.framework in Copy Frameworks */,
+				5A263C6C1C0C9A9D00E34A54 /* Quick.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -121,6 +152,12 @@
 		28D36A701B7836250007A98E /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		28D36A721B783A160007A98E /* ContactListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTests.swift; sourceTree = "<group>"; };
 		5A11294B1BB47F6D002939C5 /* ContactEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactEntity.swift; sourceTree = "<group>"; };
+		5A263C511C0C98D900E34A54 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
+		5A263C571C0C9A1500E34A54 /* GoELinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoELinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A263C591C0C9A1500E34A54 /* GoELinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoELinkTests.swift; sourceTree = "<group>"; };
+		5A263C5B1C0C9A1500E34A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A263C661C0C9A7900E34A54 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		5A263C671C0C9A7900E34A54 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		5A2B63881B98C50B00D7BBD6 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		5A2B63891B98C50B00D7BBD6 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		5A2B638A1B98C50B00D7BBD6 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -158,7 +195,7 @@
 		5A8D7F031BA0D769006E4A53 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		5A97FE501BB48601005EE7F8 /* ContentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentParser.swift; sourceTree = "<group>"; };
 		5A97FE531BB48DCC005EE7F8 /* ResponseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseEntity.swift; sourceTree = "<group>"; };
-		5AA3F2071B99D6A600C269F6 /* ContactListTableViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewControllers.swift; sourceTree = "<group>"; };
+		5AA3F2071B99D6A600C269F6 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 		5AA3F2091B99DA9D00C269F6 /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +205,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				289E2AE81B9FC3B700A47FEE /* Swinject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A263C541C0C9A1500E34A54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A263C681C0C9A7900E34A54 /* Nimble.framework in Frameworks */,
+				5A263C691C0C9A7900E34A54 /* Quick.framework in Frameworks */,
+				5A263C651C0C9A7800E34A54 /* Swinject.framework in Frameworks */,
+				5A263C621C0C9A5E00E34A54 /* GoELinkModel.framework in Frameworks */,
+				5A263C631C0C9A5E00E34A54 /* GoELinkView.framework in Frameworks */,
+				5A263C641C0C9A5E00E34A54 /* GoELinkViewModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +268,8 @@
 		289E2B0B1B9FC74100A47FEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A263C661C0C9A7900E34A54 /* Nimble.framework */,
+				5A263C671C0C9A7900E34A54 /* Quick.framework */,
 				28BB79561BFD743E00BD120D /* SwiftyJSON.framework */,
 				28B1F6EE1BE9B224009E0C1D /* ReactiveCocoa.framework */,
 				289E2AE71B9FC3B700A47FEE /* Swinject.framework */,
@@ -231,15 +283,16 @@
 			isa = PBXGroup;
 			children = (
 				289E2B0A1B9FC73800A47FEE /* dSYMs */,
+				5A263C581C0C9A1500E34A54 /* GoELinkTests */,
 				289E2B0B1B9FC74100A47FEE /* Frameworks */,
 				28BDEF811B6A86F100300553 /* GoELink */,
-				28BDEF991B6A86F100300553 /* GoELinkTests */,
 				5A3881031B9640F9005FC078 /* GoELinkModel */,
-				5A3881111B9640F9005FC078 /* GoELinkModelTests */,
 				5A3881261B964106005FC078 /* GoELinkView */,
-				5A3881341B964106005FC078 /* GoELinkViewTests */,
 				5A3881481B964113005FC078 /* GoELinkViewModel */,
+				5A3881111B9640F9005FC078 /* GoELinkModelTests */,
 				5A3881561B964114005FC078 /* GoELinkViewModelTests */,
+				5A3881341B964106005FC078 /* GoELinkViewTests */,
+				28BDEF991B6A86F100300553 /* GoELinkTests */,
 				28BDEF801B6A86F100300553 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -251,6 +304,7 @@
 				5A3881021B9640F9005FC078 /* GoELinkModel.framework */,
 				5A3881251B964106005FC078 /* GoELinkView.framework */,
 				5A3881471B964113005FC078 /* GoELinkViewModel.framework */,
+				5A263C571C0C9A1500E34A54 /* GoELinkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -283,6 +337,7 @@
 				28BDEF9A1B6A86F100300553 /* Supporting Files */,
 				28D36A701B7836250007A98E /* PersonTests.swift */,
 				28D36A721B783A160007A98E /* ContactListTests.swift */,
+				5A263C511C0C98D900E34A54 /* AppDelegateSpec.swift */,
 			);
 			path = GoELinkTests;
 			sourceTree = "<group>";
@@ -293,6 +348,15 @@
 				28BDEF9B1B6A86F100300553 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A263C581C0C9A1500E34A54 /* GoELinkTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A263C591C0C9A1500E34A54 /* GoELinkTests.swift */,
+				5A263C5B1C0C9A1500E34A54 /* Info.plist */,
+			);
+			path = GoELinkTests;
 			sourceTree = "<group>";
 		};
 		5A3881031B9640F9005FC078 /* GoELinkModel */ = {
@@ -338,7 +402,7 @@
 				289E2ADE1B9FBD0000A47FEE /* RACUtil.swift */,
 				5A3881271B964106005FC078 /* GoELinkView.h */,
 				5A3881291B964106005FC078 /* Info.plist */,
-				5AA3F2071B99D6A600C269F6 /* ContactListTableViewControllers.swift */,
+				5AA3F2071B99D6A600C269F6 /* ContactListTableViewController.swift */,
 				5AA3F2091B99DA9D00C269F6 /* ContactListTableViewCell.swift */,
 			);
 			path = GoELinkView;
@@ -437,6 +501,25 @@
 			productReference = 28BDEF7F1B6A86F100300553 /* GoELink.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5A263C561C0C9A1500E34A54 /* GoELinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A263C5C1C0C9A1500E34A54 /* Build configuration list for PBXNativeTarget "GoELinkTests" */;
+			buildPhases = (
+				5A263C531C0C9A1500E34A54 /* Sources */,
+				5A263C541C0C9A1500E34A54 /* Frameworks */,
+				5A263C551C0C9A1500E34A54 /* Resources */,
+				5A263C6A1C0C9A8600E34A54 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A263C601C0C9A2B00E34A54 /* PBXTargetDependency */,
+			);
+			name = GoELinkTests;
+			productName = GoELinkTests;
+			productReference = 5A263C571C0C9A1500E34A54 /* GoELinkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5A3881011B9640F9005FC078 /* GoELinkModel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A38811E1B9640F9005FC078 /* Build configuration list for PBXNativeTarget "GoELinkModel" */;
@@ -498,12 +581,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = GoEmerchant;
 				TargetAttributes = {
 					28BDEF7E1B6A86F100300553 = {
 						CreatedOnToolsVersion = 6.4;
+					};
+					5A263C561C0C9A1500E34A54 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 28BDEF7E1B6A86F100300553;
 					};
 					5A3881011B9640F9005FC078 = {
 						CreatedOnToolsVersion = 7.0;
@@ -533,6 +620,7 @@
 				5A3881461B964113005FC078 /* GoELinkViewModel */,
 				5A3881241B964106005FC078 /* GoELinkView */,
 				28BDEF7E1B6A86F100300553 /* GoELink */,
+				5A263C561C0C9A1500E34A54 /* GoELinkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -545,6 +633,13 @@
 				28BDEF8C1B6A86F100300553 /* Main.storyboard in Resources */,
 				28BDEF911B6A86F100300553 /* LaunchScreen.xib in Resources */,
 				28BDEF8E1B6A86F100300553 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A263C551C0C9A1500E34A54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +703,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A263C531C0C9A1500E34A54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A263C611C0C9A4A00E34A54 /* AppDelegateSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A3880FD1B9640F9005FC078 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,7 +742,7 @@
 				5A8D7F041BA0D769006E4A53 /* ContactDetailViewController.swift in Sources */,
 				5AA3F20A1B99DA9D00C269F6 /* ContactListTableViewCell.swift in Sources */,
 				289E2AE61B9FC21C00A47FEE /* LocalizedString.swift in Sources */,
-				5AA3F2081B99D6A600C269F6 /* ContactListTableViewControllers.swift in Sources */,
+				5AA3F2081B99D6A600C269F6 /* ContactListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +762,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A263C601C0C9A2B00E34A54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28BDEF7E1B6A86F100300553 /* GoELink */;
+			targetProxy = 5A263C5F1C0C9A2B00E34A54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		28BDEF8A1B6A86F100300553 /* Main.storyboard */ = {
@@ -768,8 +879,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEFINES_MODULE = YES;
-				ENABLE_BITCODE = NO;
+				DEFINES_MODULE = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -787,8 +899,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEFINES_MODULE = YES;
-				ENABLE_BITCODE = NO;
+				DEFINES_MODULE = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -799,6 +912,55 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goemerchant.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5A263C5D1C0C9A1500E34A54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GENERATE_PKGINFO_FILE = NO;
+				INFOPLIST_FILE = GoELinkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1stpaygateway.GoELinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = "non-global";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoELink.app/GoELink";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5A263C5E1C0C9A1500E34A54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GENERATE_PKGINFO_FILE = NO;
+				INFOPLIST_FILE = GoELinkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1stpaygateway.GoELinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = "non-global";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoELink.app/GoELink";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -978,6 +1140,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		5A263C5C1C0C9A1500E34A54 /* Build configuration list for PBXNativeTarget "GoELinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A263C5D1C0C9A1500E34A54 /* Debug */,
+				5A263C5E1C0C9A1500E34A54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		5A38811E1B9640F9005FC078 /* Build configuration list for PBXNativeTarget "GoELinkModel" */ = {
 			isa = XCConfigurationList;

@@ -2,11 +2,10 @@
 //  GoELinkTests.swift
 //  GoELinkTests
 //
-//  Created by GER OSULLIVAN on 7/30/15.
-//  Copyright (c) 2015 GoEmerchant. All rights reserved.
+//  Created by Ger O'Sullivan on 11/30/15.
+//  Copyright © 2015 GoEmerchant. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 class GoELinkTests: XCTestCase {
@@ -23,12 +22,12 @@ class GoELinkTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }

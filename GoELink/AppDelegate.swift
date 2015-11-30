@@ -17,8 +17,8 @@ import GoELinkView
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-    var container: Container {
-        let container = Container()
+    let container = Container() { container in
+        
         
         // Models
         container.register(Networking.self) { _ in Network() }
@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             c.viewModel = r.resolve(ContactDetailViewModeling.self)!
         }
         
-        return container
+//        return container
     }
 
 

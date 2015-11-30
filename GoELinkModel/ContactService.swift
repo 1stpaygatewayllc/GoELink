@@ -31,7 +31,7 @@ public final class ContactService: ContactServicing {
                         case .Next(let json):
                             print(json)
                             if let response = ContentParser.parseResponseEntity(JSON(json)) as ResponseEntity? {
-                                print(response)
+//                                print(response)
                                 observer.sendNext(response)
                                 loadedContactsCount += response.results.count
 //                                if response.totalCount <= loadedContactsCount || response.results.count < ParseDotComRouter.maxImagesPerPage {

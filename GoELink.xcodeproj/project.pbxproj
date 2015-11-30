@@ -43,6 +43,22 @@
 		5A263C691C0C9A7900E34A54 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C671C0C9A7900E34A54 /* Quick.framework */; };
 		5A263C6B1C0C9A9D00E34A54 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C661C0C9A7900E34A54 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A263C6C1C0C9A9D00E34A54 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C671C0C9A7900E34A54 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A263C7A1C0CC93D00E34A54 /* GoELinkViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3881471B964113005FC078 /* GoELinkViewModel.framework */; };
+		5A263C801C0CD1C300E34A54 /* DummyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A263C6D1C0CC3FE00E34A54 /* DummyResponse.swift */; };
+		5A263C811C0CD1C700E34A54 /* ContactListTableViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A263C6F1C0CC58800E34A54 /* ContactListTableViewModelSpec.swift */; };
+		5A263C821C0CD1CA00E34A54 /* ContactListTableViewCellModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A263C701C0CC7A500E34A54 /* ContactListTableViewCellModelSpec.swift */; };
+		5A263C851C0CD24B00E34A54 /* GoELinkModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3881021B9640F9005FC078 /* GoELinkModel.framework */; };
+		5A263C861C0CD31800E34A54 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C661C0C9A7900E34A54 /* Nimble.framework */; };
+		5A263C871C0CD31800E34A54 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C671C0C9A7900E34A54 /* Quick.framework */; };
+		5A263C881C0CD31800E34A54 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B1F6EE1BE9B224009E0C1D /* ReactiveCocoa.framework */; };
+		5A263C891C0CD32E00E34A54 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289E2AD01B9FBB4500A47FEE /* Result.framework */; };
+		5A263C8B1C0CD38A00E34A54 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C661C0C9A7900E34A54 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A263C8C1C0CD38A00E34A54 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C671C0C9A7900E34A54 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A263C8D1C0CD38A00E34A54 /* SwiftyJSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB79561BFD743E00BD120D /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A263C8E1C0CD38A00E34A54 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 28B1F6EE1BE9B224009E0C1D /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A263C8F1C0CD38B00E34A54 /* Swinject.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 289E2AE71B9FC3B700A47FEE /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A263C901C0CD38B00E34A54 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 289E2AD61B9FBB9F00A47FEE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A263C911C0CD38B00E34A54 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 289E2AD01B9FBB4500A47FEE /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A2B638C1B98C50B00D7BBD6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B63881B98C50B00D7BBD6 /* Network.swift */; };
 		5A2B638D1B98C50B00D7BBD6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B63891B98C50B00D7BBD6 /* NetworkError.swift */; };
 		5A2B638E1B98C50B00D7BBD6 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B638A1B98C50B00D7BBD6 /* Networking.swift */; };
@@ -72,6 +88,20 @@
 		5A97FE541BB48DCC005EE7F8 /* ResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97FE531BB48DCC005EE7F8 /* ResponseEntity.swift */; };
 		5AA3F2081B99D6A600C269F6 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA3F2071B99D6A600C269F6 /* ContactListTableViewController.swift */; };
 		5AA3F20A1B99DA9D00C269F6 /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA3F2091B99DA9D00C269F6 /* ContactListTableViewCell.swift */; };
+		5AA5DA4C1C0CF95600F1C98C /* GoELinkView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3881251B964106005FC078 /* GoELinkView.framework */; };
+		5AA5DA531C0CF99900F1C98C /* ContactListTableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5DA521C0CF99900F1C98C /* ContactListTableViewControllerSpec.swift */; };
+		5AA5DA551C0CFA5D00F1C98C /* ContactListTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5DA541C0CFA5D00F1C98C /* ContactListTableViewCellSpec.swift */; };
+		5AA5DA561C0CFB7000F1C98C /* GoELinkViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3881471B964113005FC078 /* GoELinkViewModel.framework */; };
+		5AA5DA571C0CFB9100F1C98C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C661C0C9A7900E34A54 /* Nimble.framework */; };
+		5AA5DA581C0CFB9100F1C98C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C671C0C9A7900E34A54 /* Quick.framework */; };
+		5AA5DA591C0CFB9100F1C98C /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B1F6EE1BE9B224009E0C1D /* ReactiveCocoa.framework */; };
+		5AA5DA5A1C0CFB9100F1C98C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289E2AD01B9FBB4500A47FEE /* Result.framework */; };
+		5AA5DA5C1C0CFBB300F1C98C /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C661C0C9A7900E34A54 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5AA5DA5D1C0CFBB300F1C98C /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5A263C671C0C9A7900E34A54 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5AA5DA5E1C0CFBB300F1C98C /* SwiftyJSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB79561BFD743E00BD120D /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5AA5DA5F1C0CFBB300F1C98C /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 28B1F6EE1BE9B224009E0C1D /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5AA5DA611C0CFBB300F1C98C /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 289E2AD61B9FBB9F00A47FEE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5AA5DA621C0CFBB300F1C98C /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 289E2AD01B9FBB4500A47FEE /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +111,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 28BDEF7E1B6A86F100300553;
 			remoteInfo = GoELink;
+		};
+		5A263C7B1C0CC93D00E34A54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28BDEF771B6A86F100300553 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A3881461B964113005FC078;
+			remoteInfo = GoELinkViewModel;
+		};
+		5AA5DA4D1C0CF95600F1C98C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28BDEF771B6A86F100300553 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A3881241B964106005FC078;
+			remoteInfo = GoELinkView;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -122,6 +166,39 @@
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A263C8A1C0CD33800E34A54 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5A263C8B1C0CD38A00E34A54 /* Nimble.framework in Copy Frameworks */,
+				5A263C8C1C0CD38A00E34A54 /* Quick.framework in Copy Frameworks */,
+				5A263C8D1C0CD38A00E34A54 /* SwiftyJSON.framework in Copy Frameworks */,
+				5A263C8E1C0CD38A00E34A54 /* ReactiveCocoa.framework in Copy Frameworks */,
+				5A263C8F1C0CD38B00E34A54 /* Swinject.framework in Copy Frameworks */,
+				5A263C901C0CD38B00E34A54 /* Alamofire.framework in Copy Frameworks */,
+				5A263C911C0CD38B00E34A54 /* Result.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AA5DA5B1C0CFB9F00F1C98C /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5AA5DA5C1C0CFBB300F1C98C /* Nimble.framework in Copy Frameworks */,
+				5AA5DA5D1C0CFBB300F1C98C /* Quick.framework in Copy Frameworks */,
+				5AA5DA5E1C0CFBB300F1C98C /* SwiftyJSON.framework in Copy Frameworks */,
+				5AA5DA5F1C0CFBB300F1C98C /* ReactiveCocoa.framework in Copy Frameworks */,
+				5AA5DA611C0CFBB300F1C98C /* Alamofire.framework in Copy Frameworks */,
+				5AA5DA621C0CFBB300F1C98C /* Result.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -147,17 +224,18 @@
 		28BDEF8D1B6A86F100300553 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		28BDEF901B6A86F100300553 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		28BDEF9B1B6A86F100300553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28BDEF9C1B6A86F100300553 /* GoELinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoELinkTests.swift; sourceTree = "<group>"; };
 		28BE56B81BFD6B6700A08911 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		28D36A701B7836250007A98E /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		28D36A721B783A160007A98E /* ContactListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTests.swift; sourceTree = "<group>"; };
 		5A11294B1BB47F6D002939C5 /* ContactEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactEntity.swift; sourceTree = "<group>"; };
 		5A263C511C0C98D900E34A54 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		5A263C571C0C9A1500E34A54 /* GoELinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoELinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A263C591C0C9A1500E34A54 /* GoELinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoELinkTests.swift; sourceTree = "<group>"; };
-		5A263C5B1C0C9A1500E34A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A263C661C0C9A7900E34A54 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		5A263C671C0C9A7900E34A54 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		5A263C6D1C0CC3FE00E34A54 /* DummyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyResponse.swift; sourceTree = "<group>"; };
+		5A263C6F1C0CC58800E34A54 /* ContactListTableViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewModelSpec.swift; sourceTree = "<group>"; };
+		5A263C701C0CC7A500E34A54 /* ContactListTableViewCellModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCellModelSpec.swift; sourceTree = "<group>"; };
+		5A263C751C0CC93D00E34A54 /* GoELinkViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoELinkViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2B63881B98C50B00D7BBD6 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		5A2B63891B98C50B00D7BBD6 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		5A2B638A1B98C50B00D7BBD6 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -178,12 +256,10 @@
 		5A3881251B964106005FC078 /* GoELinkView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoELinkView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3881271B964106005FC078 /* GoELinkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoELinkView.h; sourceTree = "<group>"; };
 		5A3881291B964106005FC078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A3881351B964106005FC078 /* GoELinkViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoELinkViewTests.swift; sourceTree = "<group>"; };
 		5A3881371B964106005FC078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A3881471B964113005FC078 /* GoELinkViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoELinkViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3881491B964113005FC078 /* GoELinkViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoELinkViewModel.h; sourceTree = "<group>"; };
 		5A38814B1B964113005FC078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A3881571B964114005FC078 /* GoELinkViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoELinkViewModelTests.swift; sourceTree = "<group>"; };
 		5A3881591B964114005FC078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A3881671B964258005FC078 /* contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
 		5A3881691B964258005FC078 /* ParseDotComAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseDotComAPI.swift; sourceTree = "<group>"; };
@@ -197,6 +273,9 @@
 		5A97FE531BB48DCC005EE7F8 /* ResponseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseEntity.swift; sourceTree = "<group>"; };
 		5AA3F2071B99D6A600C269F6 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 		5AA3F2091B99DA9D00C269F6 /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
+		5AA5DA471C0CF95600F1C98C /* GoELinkViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoELinkViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AA5DA521C0CF99900F1C98C /* ContactListTableViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewControllerSpec.swift; sourceTree = "<group>"; };
+		5AA5DA541C0CFA5D00F1C98C /* ContactListTableViewCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCellSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +297,19 @@
 				5A263C621C0C9A5E00E34A54 /* GoELinkModel.framework in Frameworks */,
 				5A263C631C0C9A5E00E34A54 /* GoELinkView.framework in Frameworks */,
 				5A263C641C0C9A5E00E34A54 /* GoELinkViewModel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A263C721C0CC93D00E34A54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A263C891C0CD32E00E34A54 /* Result.framework in Frameworks */,
+				5A263C861C0CD31800E34A54 /* Nimble.framework in Frameworks */,
+				5A263C871C0CD31800E34A54 /* Quick.framework in Frameworks */,
+				5A263C881C0CD31800E34A54 /* ReactiveCocoa.framework in Frameworks */,
+				5A263C851C0CD24B00E34A54 /* GoELinkModel.framework in Frameworks */,
+				5A263C7A1C0CC93D00E34A54 /* GoELinkViewModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +339,19 @@
 			files = (
 				289E2AD31B9FBB7900A47FEE /* Result.framework in Frameworks */,
 				5A3881841B964331005FC078 /* GoELinkModel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AA5DA441C0CF95600F1C98C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AA5DA571C0CFB9100F1C98C /* Nimble.framework in Frameworks */,
+				5AA5DA581C0CFB9100F1C98C /* Quick.framework in Frameworks */,
+				5AA5DA591C0CFB9100F1C98C /* ReactiveCocoa.framework in Frameworks */,
+				5AA5DA5A1C0CFB9100F1C98C /* Result.framework in Frameworks */,
+				5AA5DA561C0CFB7000F1C98C /* GoELinkViewModel.framework in Frameworks */,
+				5AA5DA4C1C0CF95600F1C98C /* GoELinkView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +388,6 @@
 			isa = PBXGroup;
 			children = (
 				289E2B0A1B9FC73800A47FEE /* dSYMs */,
-				5A263C581C0C9A1500E34A54 /* GoELinkTests */,
 				289E2B0B1B9FC74100A47FEE /* Frameworks */,
 				28BDEF811B6A86F100300553 /* GoELink */,
 				5A3881031B9640F9005FC078 /* GoELinkModel */,
@@ -305,6 +409,8 @@
 				5A3881251B964106005FC078 /* GoELinkView.framework */,
 				5A3881471B964113005FC078 /* GoELinkViewModel.framework */,
 				5A263C571C0C9A1500E34A54 /* GoELinkTests.xctest */,
+				5A263C751C0CC93D00E34A54 /* GoELinkViewModelTests.xctest */,
+				5AA5DA471C0CF95600F1C98C /* GoELinkViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,7 +439,6 @@
 		28BDEF991B6A86F100300553 /* GoELinkTests */ = {
 			isa = PBXGroup;
 			children = (
-				28BDEF9C1B6A86F100300553 /* GoELinkTests.swift */,
 				28BDEF9A1B6A86F100300553 /* Supporting Files */,
 				28D36A701B7836250007A98E /* PersonTests.swift */,
 				28D36A721B783A160007A98E /* ContactListTests.swift */,
@@ -348,15 +453,6 @@
 				28BDEF9B1B6A86F100300553 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5A263C581C0C9A1500E34A54 /* GoELinkTests */ = {
-			isa = PBXGroup;
-			children = (
-				5A263C591C0C9A1500E34A54 /* GoELinkTests.swift */,
-				5A263C5B1C0C9A1500E34A54 /* Info.plist */,
-			);
-			path = GoELinkTests;
 			sourceTree = "<group>";
 		};
 		5A3881031B9640F9005FC078 /* GoELinkModel */ = {
@@ -411,8 +507,9 @@
 		5A3881341B964106005FC078 /* GoELinkViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A3881351B964106005FC078 /* GoELinkViewTests.swift */,
 				5A3881371B964106005FC078 /* Info.plist */,
+				5AA5DA521C0CF99900F1C98C /* ContactListTableViewControllerSpec.swift */,
+				5AA5DA541C0CFA5D00F1C98C /* ContactListTableViewCellSpec.swift */,
 			);
 			path = GoELinkViewTests;
 			sourceTree = "<group>";
@@ -437,8 +534,10 @@
 		5A3881561B964114005FC078 /* GoELinkViewModelTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A3881571B964114005FC078 /* GoELinkViewModelTests.swift */,
 				5A3881591B964114005FC078 /* Info.plist */,
+				5A263C6D1C0CC3FE00E34A54 /* DummyResponse.swift */,
+				5A263C6F1C0CC58800E34A54 /* ContactListTableViewModelSpec.swift */,
+				5A263C701C0CC7A500E34A54 /* ContactListTableViewCellModelSpec.swift */,
 			);
 			path = GoELinkViewModelTests;
 			sourceTree = "<group>";
@@ -520,6 +619,25 @@
 			productReference = 5A263C571C0C9A1500E34A54 /* GoELinkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5A263C741C0CC93D00E34A54 /* GoELinkViewModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A263C7D1C0CC93D00E34A54 /* Build configuration list for PBXNativeTarget "GoELinkViewModelTests" */;
+			buildPhases = (
+				5A263C711C0CC93D00E34A54 /* Sources */,
+				5A263C721C0CC93D00E34A54 /* Frameworks */,
+				5A263C731C0CC93D00E34A54 /* Resources */,
+				5A263C8A1C0CD33800E34A54 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A263C7C1C0CC93D00E34A54 /* PBXTargetDependency */,
+			);
+			name = GoELinkViewModelTests;
+			productName = GoELinkViewModelTests;
+			productReference = 5A263C751C0CC93D00E34A54 /* GoELinkViewModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5A3881011B9640F9005FC078 /* GoELinkModel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A38811E1B9640F9005FC078 /* Build configuration list for PBXNativeTarget "GoELinkModel" */;
@@ -574,6 +692,25 @@
 			productReference = 5A3881471B964113005FC078 /* GoELinkViewModel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		5AA5DA461C0CF95600F1C98C /* GoELinkViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AA5DA511C0CF95600F1C98C /* Build configuration list for PBXNativeTarget "GoELinkViewTests" */;
+			buildPhases = (
+				5AA5DA431C0CF95600F1C98C /* Sources */,
+				5AA5DA441C0CF95600F1C98C /* Frameworks */,
+				5AA5DA451C0CF95600F1C98C /* Resources */,
+				5AA5DA5B1C0CFB9F00F1C98C /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AA5DA4E1C0CF95600F1C98C /* PBXTargetDependency */,
+			);
+			name = GoELinkViewTests;
+			productName = GoELinkViewTests;
+			productReference = 5AA5DA471C0CF95600F1C98C /* GoELinkViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -592,6 +729,9 @@
 						CreatedOnToolsVersion = 7.1.1;
 						TestTargetID = 28BDEF7E1B6A86F100300553;
 					};
+					5A263C741C0CC93D00E34A54 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 					5A3881011B9640F9005FC078 = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -600,6 +740,9 @@
 					};
 					5A3881461B964113005FC078 = {
 						CreatedOnToolsVersion = 7.0;
+					};
+					5AA5DA461C0CF95600F1C98C = {
+						CreatedOnToolsVersion = 7.1.1;
 					};
 				};
 			};
@@ -621,6 +764,8 @@
 				5A3881241B964106005FC078 /* GoELinkView */,
 				28BDEF7E1B6A86F100300553 /* GoELink */,
 				5A263C561C0C9A1500E34A54 /* GoELinkTests */,
+				5A263C741C0CC93D00E34A54 /* GoELinkViewModelTests */,
+				5AA5DA461C0CF95600F1C98C /* GoELinkViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -637,6 +782,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5A263C551C0C9A1500E34A54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A263C731C0CC93D00E34A54 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -661,6 +813,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5A3881451B964113005FC078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AA5DA451C0CF95600F1C98C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -708,6 +867,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A263C611C0C9A4A00E34A54 /* AppDelegateSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A263C711C0CC93D00E34A54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A263C801C0CD1C300E34A54 /* DummyResponse.swift in Sources */,
+				5A263C811C0CD1C700E34A54 /* ContactListTableViewModelSpec.swift in Sources */,
+				5A263C821C0CD1CA00E34A54 /* ContactListTableViewCellModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +930,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5AA5DA431C0CF95600F1C98C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AA5DA531C0CF99900F1C98C /* ContactListTableViewControllerSpec.swift in Sources */,
+				5AA5DA551C0CFA5D00F1C98C /* ContactListTableViewCellSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -768,6 +946,16 @@
 			isa = PBXTargetDependency;
 			target = 28BDEF7E1B6A86F100300553 /* GoELink */;
 			targetProxy = 5A263C5F1C0C9A2B00E34A54 /* PBXContainerItemProxy */;
+		};
+		5A263C7C1C0CC93D00E34A54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A3881461B964113005FC078 /* GoELinkViewModel */;
+			targetProxy = 5A263C7B1C0CC93D00E34A54 /* PBXContainerItemProxy */;
+		};
+		5AA5DA4E1C0CF95600F1C98C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A3881241B964106005FC078 /* GoELinkView */;
+			targetProxy = 5AA5DA4D1C0CF95600F1C98C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -964,6 +1152,39 @@
 			};
 			name = Release;
 		};
+		5A263C7E1C0CC93D00E34A54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = GoELinkViewModelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1stpaygateway.GoELinkViewModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5A263C7F1C0CC93D00E34A54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = GoELinkViewModelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1stpaygateway.GoELinkViewModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		5A38811A1B9640F9005FC078 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1120,6 +1341,40 @@
 			};
 			name = Release;
 		};
+		5AA5DA4F1C0CF95600F1C98C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = GoELinkViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1stpaygateway.GoELinkViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5AA5DA501C0CF95600F1C98C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = GoELinkViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1stpaygateway.GoELinkViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1148,6 +1403,16 @@
 				5A263C5E1C0C9A1500E34A54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A263C7D1C0CC93D00E34A54 /* Build configuration list for PBXNativeTarget "GoELinkViewModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A263C7E1C0CC93D00E34A54 /* Debug */,
+				5A263C7F1C0CC93D00E34A54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A38811E1B9640F9005FC078 /* Build configuration list for PBXNativeTarget "GoELinkModel" */ = {
 			isa = XCConfigurationList;
@@ -1175,6 +1440,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		5AA5DA511C0CF95600F1C98C /* Build configuration list for PBXNativeTarget "GoELinkViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AA5DA4F1C0CF95600F1C98C /* Debug */,
+				5AA5DA501C0CF95600F1C98C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -35,7 +35,7 @@ public final class Network: Networking {
                 .response(queue: self.queue, responseSerializer: Alamofire.Request.JSONResponseSerializer()) {(Response) -> Void in
                     switch Response.result {
                     case .Success(let value):
-                        print(value)
+//                        print(value)
                         observer.sendNext(value)
                         observer.sendCompleted()
                     case .Failure(let error):

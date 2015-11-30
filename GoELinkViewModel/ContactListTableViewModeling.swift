@@ -6,7 +6,6 @@
 //  Copyright © 2015 GoEmerchant. All rights reserved.
 //
 
-import GoELinkModel
 import ReactiveCocoa
 
 public protocol ContactListTableViewModeling {

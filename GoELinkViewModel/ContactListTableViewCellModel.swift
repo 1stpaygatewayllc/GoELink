@@ -5,7 +5,7 @@
 //  Created by Ger O'Sullivan on 9/3/15.
 //  Copyright © 2015 GoEmerchant. All rights reserved.
 //
-
+import CommonUtils
 import ReactiveCocoa
 import GoELinkModel
 

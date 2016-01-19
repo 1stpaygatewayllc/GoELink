@@ -13,6 +13,18 @@ import GoELinkViewModel
 public final class ContactDetailViewController: UIViewController {
     public var viewModel: ContactDetailViewModeling?
     
+    @IBOutlet weak var objectIdLabel: UILabel!
+    
+    @IBOutlet weak var firstNameLabel: UILabel!
+    
+    @IBOutlet weak var lastNameLabel: UILabel!
+    
+    
+    @IBOutlet weak var lastNameTextField: UITextField!
+    
+    
+    @IBOutlet weak var firstNameTextField: UITextField!
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,20 +56,36 @@ public final class ContactDetailViewController: UIViewController {
 //            viewModel.likeCountText.producer
 //                .on(next: { self.likeCountLabel.text = $0 })
 //                .start()
+            
+            let validFirstNameSignal = self.lastNameTextField.rac_textSignal().toSignalProducer()
+                .map { self.isValidFirstName($0 as! String) }
+            
+            let validLastNameSignal = self.lastNameTextField.rac_textSignal().toSignalProducer()
+                .map { self.isValidLastName($0 as! String) }
+            
+            validFirstNameSignal.map { $0 ? UIColor.clearColor() : UIColor.yellowColor() }
+                .startWithNext { self.lastNameTextField.backgroundColor = $0 }
+            
+            validLastNameSignal.map { $0 ? UIColor.clearColor() : UIColor.yellowColor() }
+                .startWithNext { self.firstNameTextField.backgroundColor = $0 }
+            
+            
         }
     }
     
-    @IBOutlet weak var objectIdLabel: UILabel!
     
-    @IBOutlet weak var firstNameLabel: UILabel!
+    func isValidLastName(lastname: String) -> Bool {
+        return lastname.characters.count > 3;
+    }
     
-    @IBOutlet weak var lastNameLabel: UILabel!
+    func isValidFirstName(firstname: String) -> Bool {
+        return firstname.characters.count > 3;
+    }
     
+
+
+
     
-    @IBOutlet weak var lastNameTextField: UITextField!
-    
-    
-    @IBOutlet weak var firstNameTextField: UITextField!
     
 //    @IBOutlet weak var imageView: UIImageView!
 //    @IBOutlet weak var tagLabel: UILabel!

@@ -25,8 +25,14 @@ public final class ContactDetailViewController: UIViewController {
     
     @IBOutlet weak var firstNameTextField: UITextField!
     
+    @IBOutlet weak var submitButton: UIButton!
+    
+    var submitService: DummySubmitService!
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.submitService = DummySubmitService()
         
         if let viewModel = viewModel {
             viewModel.objectId.producer
@@ -57,22 +63,50 @@ public final class ContactDetailViewController: UIViewController {
 //                .on(next: { self.likeCountLabel.text = $0 })
 //                .start()
             
-            let validFirstNameSignal = self.lastNameTextField.rac_textSignal().toSignalProducer()
+            let validFirstNameSignal = self.firstNameTextField.rac_textSignal().toSignalProducer()
                 .map { self.isValidFirstName($0 as! String) }
             
             let validLastNameSignal = self.lastNameTextField.rac_textSignal().toSignalProducer()
                 .map { self.isValidLastName($0 as! String) }
             
             validFirstNameSignal.map { $0 ? UIColor.clearColor() : UIColor.yellowColor() }
-                .startWithNext { self.lastNameTextField.backgroundColor = $0 }
-            
-            validLastNameSignal.map { $0 ? UIColor.clearColor() : UIColor.yellowColor() }
                 .startWithNext { self.firstNameTextField.backgroundColor = $0 }
             
+            validLastNameSignal.map { $0 ? UIColor.clearColor() : UIColor.yellowColor() }
+                .startWithNext { self.lastNameTextField.backgroundColor = $0 }
+            
+            
+            let submitActiveSignal = combineLatest(validFirstNameSignal, validLastNameSignal).map { $0 && $1 }
+            submitActiveSignal.startWithNext { self.submitButton.enabled = $0 }
+            
+            
+            self.submitButton.rac_signalForControlEvents(.TouchUpInside).toSignalProducer()
+                .on(next: { _ in
+                    self.submitButton.enabled = false
+//                    self.submitFailureText.hidden = true
+
+                })
+                .flatMap(FlattenStrategy.Merge, transform: { _ in self.submitSignal() })
+                .startWithNext { success in
+                    self.submitButton.enabled = true
+//                    self.signInFailureText.hidden = success
+                    if (success) {
+//                        self.performSegueWithIdentifier("submitSuccess", sender: self)
+                        print("Success on submit!!")
+                    }
+            }
             
         }
     }
     
+    func submitSignal() -> SignalProducer<Bool, NSError> {
+        return SignalProducer { (o: Observer<Bool, NSError>, _) -> () in
+            self.submitService.signInWithUsername(self.firstNameTextField.text!, lastname: self.lastNameTextField.text!, complete: { (success) -> () in
+                o.sendNext(success)
+                o.sendCompleted()
+            })
+        }
+    }
     
     func isValidLastName(lastname: String) -> Bool {
         return lastname.characters.count > 3;
@@ -105,4 +139,17 @@ public final class ContactDetailViewController: UIViewController {
 //        alertController.addAction(UIAlertAction(title: cancelText, style: .Cancel, handler: nil))
 //        self.presentViewController(alertController, animated: true, completion: nil)
 //    }
+}
+
+
+class DummySubmitService {
+    func signInWithUsername(firstname: String, lastname: String, complete completeBlock:(Bool) -> ()) {
+        let delayInSeconds: Double = 1.0
+        
+        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)))
+        dispatch_after(popTime, dispatch_get_main_queue(), {
+            let success = firstname != "" && lastname != ""
+            completeBlock(success)
+        })
+    }
 }

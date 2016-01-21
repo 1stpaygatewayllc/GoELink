@@ -39,6 +39,7 @@ public final class ContactDetailViewModel: ContactDetailViewModeling {
     private var (stopSignalProducer, stopSignalObserver) = SignalProducer<(), NoError>.buffer()
     
     private let network: Networking
+    private let contactService: ContactServicing
 //    private let externalAppChannel: ExternalAppChanneling
 
 //    public init(network: Networking, externalAppChannel: ExternalAppChanneling) {
@@ -46,7 +47,8 @@ public final class ContactDetailViewModel: ContactDetailViewModeling {
 //        self.externalAppChannel = externalAppChannel
 //    }
     
-    public init(network: Networking) {
+    public init(contactService: ContactServicing, network: Networking) {
+        self.contactService = contactService
         self.network = network
     }
     
@@ -58,6 +60,38 @@ public final class ContactDetailViewModel: ContactDetailViewModeling {
     
     private var currentContactEntity: ContactEntity? {
         return contactEntities.indices.contains(currentContactIndex) ? contactEntities[currentContactIndex] : nil
+    }
+    
+    public func submitWithParameters(objectId: String, firstname: String, lastname: String, complete completeBlock:(Bool) -> ()) {
+//        let delayInSeconds: Double = 1.0
+        self._objectId.value = objectId
+        self._firstNameText.value = firstname
+        self._lastNameText.value = lastname
+        
+        let parameters = ["first_name":"\(firstname)", "last_name":"\(lastname)"]
+        
+
+//        contactEntities[currentContactIndex].objectId = objectId
+//        contactEntities[currentContactIndex].first_name = ""
+        
+        
+//        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)))
+//        dispatch_after(popTime, dispatch_get_main_queue(), {
+//            let success = firstname != "" && lastname != ""
+//            completeBlock(success)
+//        })
+        
+        print("currentContactIndex: \(currentContactIndex)")
+        print("contactEntities Count: \(self.contactEntities.count)")
+        
+        
+        print("Running update...")
+        let result = self.contactService.updateContact(objectId, parameters: parameters)
+        
+        let success = (result.first()?.value)! as Bool
+        print("Result: \(success)")
+        
+        completeBlock(success)
     }
 }
 
@@ -73,6 +107,7 @@ extension ContactDetailViewModel: ContactDetailViewModelModifiable {
         self._objectId.value = contactEntity?.objectId.value
         self._firstNameText.value = contactEntity?.first_name.value
         self._lastNameText.value = contactEntity?.last_name.value
+    
         
 //        self._usernameText.value = contactEntity?.first_name
 //        self._pageImageSizeText.value = imageEntity.map { "\($0.pageImageWidth) x \($0.pageImageHeight)" }
@@ -100,4 +135,18 @@ extension ContactDetailViewModel: ContactDetailViewModelModifiable {
 //    public func updateIndex(index: Int) {
 //        update(imageEntities, atIndex: index)
 //    }
+    
+
 }
+
+//class DummySubmitService {
+//    func submitWithFirstNameLastName(firstname: String, lastname: String, complete completeBlock:(Bool) -> ()) {
+//        let delayInSeconds: Double = 1.0
+//        
+//        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)))
+//        dispatch_after(popTime, dispatch_get_main_queue(), {
+//            let success = firstname != "" && lastname != ""
+//            completeBlock(success)
+//        })
+//    }
+//}

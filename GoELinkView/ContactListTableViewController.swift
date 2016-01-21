@@ -49,10 +49,10 @@ public final class ContactListTableViewController: UITableViewController {
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        if !autoSearchStarted {
-            autoSearchStarted = true
+//        if !autoSearchStarted {
+//            autoSearchStarted = true
             viewModel?.startSearch()
-        }
+//        }
     }
     
     private func displayErrorMessage(errorMessage: String) {

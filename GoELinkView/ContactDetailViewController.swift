@@ -27,12 +27,12 @@ public final class ContactDetailViewController: UIViewController {
     
     @IBOutlet weak var submitButton: UIButton!
     
-    var submitService: DummySubmitService!
+//    var submitService: DummySubmitService!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.submitService = DummySubmitService()
+//        self.submitService = DummySubmitService()
         
         if let viewModel = viewModel {
             viewModel.objectId.producer
@@ -99,9 +99,12 @@ public final class ContactDetailViewController: UIViewController {
         }
     }
     
+
+    
     func submitSignal() -> SignalProducer<Bool, NSError> {
+    
         return SignalProducer { (o: Observer<Bool, NSError>, _) -> () in
-            self.submitService.signInWithUsername(self.firstNameTextField.text!, lastname: self.lastNameTextField.text!, complete: { (success) -> () in
+            self.viewModel!.submitWithParameters(self.objectIdLabel.text!, firstname: self.firstNameTextField.text!, lastname: self.lastNameTextField.text!, complete: { (success) -> () in
                 o.sendNext(success)
                 o.sendCompleted()
             })
@@ -142,14 +145,4 @@ public final class ContactDetailViewController: UIViewController {
 }
 
 
-class DummySubmitService {
-    func signInWithUsername(firstname: String, lastname: String, complete completeBlock:(Bool) -> ()) {
-        let delayInSeconds: Double = 1.0
-        
-        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)))
-        dispatch_after(popTime, dispatch_get_main_queue(), {
-            let success = firstname != "" && lastname != ""
-            completeBlock(success)
-        })
-    }
-}
+

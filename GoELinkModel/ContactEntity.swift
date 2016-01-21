@@ -43,7 +43,7 @@ final public class ContactEntity: Equatable, JSONDecodable, JSONEncodable  {
         _profileURL = MutableProperty<String>("")
     }
     
-    init(first_name: String, last_name: String, objectId: String, profileURL: String) {
+    public init(first_name: String, last_name: String, objectId: String, profileURL: String) {
         _objectId = MutableProperty<String>(objectId)
         _first_name = MutableProperty<String>(first_name)
         _last_name = MutableProperty<String>(last_name)

@@ -22,6 +22,7 @@ public protocol ContactDetailViewModeling {
 //    var image: AnyProperty<UIImage?> { get }
     
 //    func openImagePage()
+     func submitWithParameters(objectId: String, firstname: String, lastname: String, complete completeBlock:(Bool) -> ())
 }
 
 public protocol ContactDetailViewModelModifiable: ContactDetailViewModeling {

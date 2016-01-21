@@ -54,4 +54,43 @@ public final class ContactService: ContactServicing {
             }).start()
         }
     }
+    
+    
+    public func updateContact(key: String, parameters: Dictionary<String, AnyObject>) -> SignalProducer<Bool, NetworkError> {
+        return SignalProducer { observer, disposable in
+            let load = SignalProducer<(), NoError>(value: ())
+            load.on(next: {
+                self.network.requestJSONWithRoute(ParseDotComRouter.UpdateContact(key, parameters))
+                    .start({ event in
+                        switch event {
+                        case .Next(let json):
+                            print(json)
+//                            if let response = ContentParser.parseResponseEntity(JSON(json)) as ResponseEntity? {
+//                                //                                print(response)
+////                                observer.sendNext(response)
+////                                loadedContactsCount += response.results.count
+//                                //                                if response.totalCount <= loadedContactsCount || response.results.count < ParseDotComRouter.maxImagesPerPage {
+//                                //                                    sendCompleted(observer)
+//                                //                                }
+//                                observer.sendCompleted()
+//                            }
+//                            else {
+//                                observer.sendFailed(.IncorrectDataReturned)
+//                            }
+                            observer.sendNext(true)
+                            observer.sendCompleted()
+                            
+                        case .Failed(let error):
+                            observer.sendFailed(error)
+                        case .Completed:
+                            break
+                        case .Interrupted:
+                            observer.sendInterrupted()
+                        }
+                    })
+                //                parameters = Pixabay.incrementPage(parameters)
+            }).start()
+        }
+    }
+    
 }

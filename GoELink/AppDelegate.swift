@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             }.inObjectScope(.Container)
         container.register(ContactDetailViewModelModifiable.self) { _ in
             ContactDetailViewModel(
-                network: container.resolve(Networking.self)!)
+                contactService: container.resolve(ContactServicing.self)!, network: container.resolve(Networking.self)!)
             }.inObjectScope(.Container)
         container.register(ContactDetailViewModeling.self) { r in
             r.resolve(ContactDetailViewModelModifiable.self)!

@@ -17,7 +17,7 @@ public enum ParseDotComRouter: URLRequestConvertible {
     case ReadAllContacts
 //    case CreateContact([String: AnyObject])
 //    case ReadContact(String)
-//    case UpdateContact(String, [String: AnyObject])
+    case UpdateContact(String, [String: AnyObject])
 //    case DestroyContact(String)
     
     var method: Alamofire.Method {
@@ -28,8 +28,8 @@ public enum ParseDotComRouter: URLRequestConvertible {
 //            return .POST
 //        case .ReadContact:
 //            return .GET
-//        case .UpdateContact:
-//            return .PUT
+        case .UpdateContact:
+            return .PUT
 //        case .DestroyContact:
 //            return .DELETE
         }
@@ -43,8 +43,8 @@ public enum ParseDotComRouter: URLRequestConvertible {
 //            return "1/classes/Contacts"
 //        case .ReadContact(let fullName):
 //            return "1/classes/Contacts/\(fullName)"
-//        case .UpdateContact(let fullName, _):
-//            return "1/classes/Contacts/\(fullName)"
+        case .UpdateContact(let objectId, _):
+            return "1/classes/Contacts/\(objectId)"
 //        case .DestroyContact(let fullName):
 //            return "1/classes/Contacts/\(fullName)"
         }
@@ -71,8 +71,9 @@ public enum ParseDotComRouter: URLRequestConvertible {
         switch self {
 //        case .CreateContact(let parameters):
 //            return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: parameters).0
-//        case .UpdateContact(_, let parameters):
-//            return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: parameters).0
+        case .UpdateContact(_, let parameters):
+            print("Parameters: \(parameters)")
+            return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: parameters).0
         default:
             return mutableURLRequest
         }

@@ -31,6 +31,11 @@ public final class Network: Networking {
     
     public func requestJSONWithRoute(route: ParseDotComRouter) -> SignalProducer<AnyObject, NetworkError> {
         return SignalProducer<AnyObject, NetworkError>  { observer, disposable in
+            
+            print("route.method: \(route.method)")
+            print("route.path: \(route.path)")
+            print("route.URLRequest.URLString: \(route.URLRequest.URLString)")
+            
             Alamofire.request(route)
                 .response(queue: self.queue, responseSerializer: Alamofire.Request.JSONResponseSerializer()) {(Response) -> Void in
                     switch Response.result {

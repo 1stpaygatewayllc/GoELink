@@ -53,6 +53,7 @@ public final class ContactListTableViewModel: ContactListTableViewModeling {
     
     public func startSearch() {
         func toCellModel(contact: ContactEntity) -> ContactListTableViewCellModeling {
+//            print("Name: \(contact.first_name.value) \(contact.last_name.value) - ObjectId: \(contact.objectId.value)")
             return ContactListTableViewCellModel(contact: contact, network: self.network) as ContactListTableViewCellModeling
         }
         
@@ -66,8 +67,8 @@ public final class ContactListTableViewModel: ContactListTableViewModeling {
             }
             .observeOn(UIScheduler())
             .on(next: { contacts, cellModels in
-                self.foundContacts += contacts
-                self._cellModels.value += cellModels
+                self.foundContacts = contacts
+                self._cellModels.value = cellModels
                 self._searching.value = false
             })
 //            .on(error: { error in

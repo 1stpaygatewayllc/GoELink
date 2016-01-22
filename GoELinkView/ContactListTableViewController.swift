@@ -83,6 +83,9 @@ extension ContactListTableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactListTableViewCell", forIndexPath: indexPath) as! ContactListTableViewCell
         cell.viewModel = viewModel.map { $0.cellModels.value[indexPath.row] }
         
+//        print("Name: \(cell.viewModel!.first_name) \(cell.viewModel!.last_name) - ObjectId: \(cell.viewModel!.objectId)")
+        
+            
 //        if let viewModel = viewModel
 //            where indexPath.row >= viewModel.cellModels.value.count - 1 && viewModel.loadNextPage.enabled.value {
 //                viewModel.loadNextPage.apply(()).start()

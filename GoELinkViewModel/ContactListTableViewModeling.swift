@@ -11,6 +11,7 @@ import ReactiveCocoa
 public protocol ContactListTableViewModeling {
     var cellModels: AnyProperty<[ContactListTableViewCellModeling]> { get }
     var searching: AnyProperty<Bool> { get }
+    var refreshing: AnyProperty<Bool> { get }
     var errorMessage: AnyProperty<String?> { get }
     
     func startSearch()

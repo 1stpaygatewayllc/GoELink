@@ -19,7 +19,7 @@ public final class ContactListTableViewCellModel: NSObject, ContactListTableView
     private let profileURL: String
     private var profileImage: UIImage?
     
-    var newContactEntity: ContactEntity = ContactEntity()
+//    var newContactEntity: ContactEntity = ContactEntity()
     
     internal init(contact: ContactEntity, network: Networking) {
         

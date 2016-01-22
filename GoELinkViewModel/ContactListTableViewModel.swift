@@ -12,10 +12,12 @@ import GoELinkModel
 public final class ContactListTableViewModel: ContactListTableViewModeling {
     public var cellModels: AnyProperty<[ContactListTableViewCellModeling]> { return AnyProperty(_cellModels) }
     public var searching: AnyProperty<Bool> { return AnyProperty(_searching) }
+    public var refreshing: AnyProperty<Bool> { return AnyProperty(_refreshing) }
     public var errorMessage: AnyProperty<String?> { return AnyProperty(_errorMessage) }
     
     private let _cellModels = MutableProperty<[ContactListTableViewCellModeling]>([])
     private let _searching = MutableProperty<Bool>(false)
+    private let _refreshing = MutableProperty<Bool>(false)
     private let _errorMessage = MutableProperty<String?>(nil)
     
     /// Accepts property injection.
@@ -52,10 +54,7 @@ public final class ContactListTableViewModel: ContactListTableViewModeling {
     }
     
     public func startSearch() {
-        func toCellModel(contact: ContactEntity) -> ContactListTableViewCellModeling {
-//            print("Name: \(contact.first_name.value) \(contact.last_name.value) - ObjectId: \(contact.objectId.value)")
-            return ContactListTableViewCellModel(contact: contact, network: self.network) as ContactListTableViewCellModeling
-        }
+
         
         _searching.value = true
         nextPageTrigger.value = SignalProducer<(), NoError>.buffer()
@@ -63,7 +62,7 @@ public final class ContactListTableViewModel: ContactListTableViewModeling {
         
         contactService.fetchAllContacts(nextPageTrigger: trigger)
             .map { response in
-                (response.results, response.results.map { toCellModel($0) })
+                (response.results, response.results.map { self.toCellModel($0) })
             }
             .observeOn(UIScheduler())
             .on(next: { contacts, cellModels in
@@ -89,5 +88,16 @@ public final class ContactListTableViewModel: ContactListTableViewModeling {
     public func selectCellAtIndex(index: Int) {
         contactDetailViewModel?.update(foundContacts, atIndex: index)
     }
+    
+    public func toCellModel(contact: ContactEntity) -> ContactListTableViewCellModeling {
+        print("Name: \(contact.first_name.value) \(contact.last_name.value) - ObjectId: \(contact.objectId.value)")
+        return ContactListTableViewCellModel(contact: contact, network: self.network) as ContactListTableViewCellModeling
+    }
+    
+    public func updateCellModels(cellModels: [ContactListTableViewCellModeling]) {
+        self._refreshing.value = true
+        self._cellModels.value = cellModels
+    }
+    
 }
 

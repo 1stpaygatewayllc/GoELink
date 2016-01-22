@@ -68,6 +68,19 @@ public final class ContactDetailViewModel: ContactDetailViewModeling {
         self._firstNameText.value = firstname
         self._lastNameText.value = lastname
         
+        let contactEntity  = ContactEntity(first_name: firstname, last_name: lastname, objectId: objectId, profileURL: "")
+        let cellViewModel = ContactListTableViewCellModel(contact: contactEntity, network: network)
+
+        let tableViewModel = ContactListTableViewModel.init(contactService: contactService, network: network)
+    
+        
+        var modifiedCellModels = contactEntities.map { tableViewModel.toCellModel($0)}
+
+        modifiedCellModels[currentContactIndex] = cellViewModel
+
+        tableViewModel.updateCellModels(modifiedCellModels)
+      
+        
         let parameters = ["first_name":"\(firstname)", "last_name":"\(lastname)"]
         
 
@@ -81,6 +94,8 @@ public final class ContactDetailViewModel: ContactDetailViewModeling {
 //            completeBlock(success)
 //        })
         
+
+        
         print("currentContactIndex: \(currentContactIndex)")
         print("contactEntities Count: \(self.contactEntities.count)")
         
@@ -90,6 +105,8 @@ public final class ContactDetailViewModel: ContactDetailViewModeling {
         
         let success = (result.first()?.value)! as Bool
         print("Result: \(success)")
+        
+//        update(self.contactEntities, atIndex: currentContactIndex)
         
         completeBlock(success)
     }

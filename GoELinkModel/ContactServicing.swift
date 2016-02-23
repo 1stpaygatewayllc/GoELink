@@ -7,6 +7,7 @@
 //
 
 import ReactiveCocoa
+import enum Result.NoError
 
 public protocol ContactServicing {
     func fetchAllContacts(nextPageTrigger trigger: SignalProducer<(), NoError>) -> SignalProducer<ResponseEntity, NetworkError>

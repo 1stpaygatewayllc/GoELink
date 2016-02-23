@@ -9,6 +9,7 @@
 import ReactiveCocoa
 //import Himotoki
 import SwiftyJSON
+import enum Result.NoError
 
 public final class ContactService: ContactServicing {
     private let network: Networking

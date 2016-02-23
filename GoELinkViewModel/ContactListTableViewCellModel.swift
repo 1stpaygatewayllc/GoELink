@@ -8,6 +8,7 @@
 import CommonUtils
 import ReactiveCocoa
 import GoELinkModel
+import enum Result.NoError
 
 // Inherits NSObject to use rac_willDeallocSignal.
 public final class ContactListTableViewCellModel: NSObject, ContactListTableViewCellModeling {

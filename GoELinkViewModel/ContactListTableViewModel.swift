@@ -8,6 +8,7 @@
 
 import ReactiveCocoa
 import GoELinkModel
+import enum Result.NoError
 
 public final class ContactListTableViewModel: ContactListTableViewModeling {
     public var cellModels: AnyProperty<[ContactListTableViewCellModeling]> { return AnyProperty(_cellModels) }
@@ -57,7 +58,7 @@ public final class ContactListTableViewModel: ContactListTableViewModeling {
 
         
         _searching.value = true
-        nextPageTrigger.value = SignalProducer<(), NoError>.buffer()
+        nextPageTrigger.value = SignalProducer<(), NoError>.buffer(0)
         let (trigger, _) = nextPageTrigger.value!
         
         contactService.fetchAllContacts(nextPageTrigger: trigger)

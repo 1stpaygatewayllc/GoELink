@@ -49,9 +49,13 @@ public final class ContactListTableViewController: UITableViewController {
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-//        if !autoSearchStarted {
-//            autoSearchStarted = true
+        if !autoSearchStarted {
+            autoSearchStarted = true
             viewModel?.startSearch()
+        }
+        
+//        if (viewModel!.refreshing.value == true) {
+//            self.tableView.reloadData()
 //        }
     }
     

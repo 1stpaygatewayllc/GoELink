@@ -7,6 +7,7 @@
 //
 
 import ReactiveCocoa
+import enum Result.NoError
 
 public protocol ContactListTableViewCellModeling {
     var objectId: String { get }

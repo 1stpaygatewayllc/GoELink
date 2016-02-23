@@ -8,6 +8,7 @@
 
 import UIKit
 import ReactiveCocoa
+import enum Result.NoError
 
 extension UITableViewCell {
     public var racutil_prepareForReuseProducer: SignalProducer<(), NoError>  {

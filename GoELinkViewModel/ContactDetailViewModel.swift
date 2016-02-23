@@ -8,6 +8,7 @@
 
 import ReactiveCocoa
 import GoELinkModel
+import enum Result.NoError
 
 public final class ContactDetailViewModel: ContactDetailViewModeling {
     public var objectId: AnyProperty<String?> { return AnyProperty(_objectId) }
@@ -36,7 +37,7 @@ public final class ContactDetailViewModel: ContactDetailViewModeling {
     internal var locale = NSLocale.currentLocale() // For testing.
     private var contactEntities = [ContactEntity]()
     private var currentContactIndex = 0
-    private var (stopSignalProducer, stopSignalObserver) = SignalProducer<(), NoError>.buffer()
+    private var (stopSignalProducer, stopSignalObserver) = SignalProducer<(), NoError>.buffer(0)
     
     private let network: Networking
     private let contactService: ContactServicing
@@ -115,7 +116,7 @@ public final class ContactDetailViewModel: ContactDetailViewModeling {
 extension ContactDetailViewModel: ContactDetailViewModelModifiable {
     public func update(contactEntities: [ContactEntity], atIndex index: Int) {
         stopSignalObserver.sendNext(())
-        (stopSignalProducer, stopSignalObserver) = SignalProducer<(), NoError>.buffer()
+        (stopSignalProducer, stopSignalObserver) = SignalProducer<(), NoError>.buffer(0)
         
         self.contactEntities = contactEntities
         currentContactIndex = index
